@@ -11,7 +11,7 @@
 
     <groupId>com.github.keim-hs-esslingen.efs</groupId>
     <artifactId>efs-service-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>EFS-Service-Parent</name>
@@ -49,7 +49,7 @@
             <dependency>
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>middleware-core</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
