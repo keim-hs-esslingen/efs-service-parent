@@ -70,7 +70,7 @@
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>trias-adapter</artifactId>
                 <!-- Make sure the trias-adapter uses the same middleware-core version as this pom.xml -->
-                <version>1.2.5</version>
+                <version>1.2.6-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
