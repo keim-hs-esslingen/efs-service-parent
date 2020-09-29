@@ -11,7 +11,7 @@
 
     <groupId>com.github.keim-hs-esslingen.efs</groupId>
     <artifactId>efs-service-parent</artifactId>
-    <version>1.2.3</version>
+    <version>1.2.4-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>EFS-Service-Parent</name>
