@@ -19,9 +19,10 @@
     <url>https://github.com/keim-hs-esslingen/efs-service-parent</url>
     
     <scm>
-        <connection>scm:git:git://github.com:keim-hs-esslingen/efs-service-parent.git</connection>
-        <developerConnection>scm:git:ssh://github.com:keim-hs-esslingen/efs-service-parent.git</developerConnection>
+        <connection>scm:git:https://github.com/keim-hs-esslingen/efs-service-parent.git</connection>
+        <developerConnection>scm:git:https://github.com/keim-hs-esslingen/efs-service-parent.git</developerConnection>
         <url>https://github.com/keim-hs-esslingen/efs-service-parent</url>
+        <tag>HEAD</tag>
     </scm>
     
     <licenses>
@@ -167,6 +168,15 @@
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <configuration>
+                    <tagNameFormat>Release-@{project.version}</tagNameFormat>
+                    <releaseProfiles>release</releaseProfiles>
+                </configuration>
             </plugin>
         </plugins>
     </build>
