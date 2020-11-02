@@ -56,7 +56,7 @@
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>service-directory-plugin</artifactId>
                 <!-- Make sure the service-directory-plugin uses the same mobility-commons version as this pom.xml -->
-                <version>3.0.0</version>
+                <version>3.0.1</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
