@@ -10,7 +10,7 @@
 
     <groupId>com.github.keim-hs-esslingen.efs</groupId>
     <artifactId>efs-service-parent</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <name>EFS-Service-Parent</name>
@@ -21,7 +21,7 @@
         <connection>scm:git:https://github.com/keim-hs-esslingen/efs-service-parent.git</connection>
         <developerConnection>scm:git:https://github.com/keim-hs-esslingen/efs-service-parent.git</developerConnection>
         <url>https://github.com/keim-hs-esslingen/efs-service-parent</url>
-        <tag>Release-3.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <licenses>
