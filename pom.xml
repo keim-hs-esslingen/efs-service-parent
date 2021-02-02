@@ -63,21 +63,21 @@
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>middleware-core</artifactId>
                 <!-- Make sure the middleware-core uses the same mobility-commons version as this pom.xml -->
-                <version>3.3.0</version>
+                <version>3.3.1-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>middleware-test</artifactId>
                 <!-- Make sure the middleware-test uses the same middleware-core version as this pom.xml -->
-                <version>3.3.0</version>
+                <version>3.3.1-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>trias-adapter</artifactId>
                 <!-- Make sure the trias-adapter uses the same middleware-core version as this pom.xml -->
-                <version>3.3.0</version>
+                <version>3.3.1-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
         </dependencies>
