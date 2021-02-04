@@ -49,14 +49,14 @@
             <dependency>
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>mobility-commons</artifactId>
-                <version>3.3.0</version>
+                <version>3.3.1-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>service-directory-plugin</artifactId>
                 <!-- Make sure the service-directory-plugin uses the same mobility-commons version as this pom.xml -->
-                <version>3.3.0</version>
+                <version>3.3.1-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
