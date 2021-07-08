@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.github.keim-hs-esslingen.efs</groupId>
         <artifactId>efs-parent</artifactId>
-        <version>2.0.3</version>
+        <version>2.0.4-SNAPSHOT</version>
         <relativePath /> <!-- skip parent lookup in parent directory. -->
     </parent>
 
@@ -73,7 +73,7 @@
             <dependency>
                 <groupId>com.github.keim-hs-esslingen.efs</groupId>
                 <artifactId>trias-adapter</artifactId>
-                <!-- Make sure the trias-adapter uses the same middleware-core version as this pom.xml -->
+                <!-- Make sure the TRIAS-adapter uses the same middleware-core version as this pom.xml -->
                 <version>3.4.0-SNAPSHOT</version>
                 <optional>true</optional>
             </dependency>
@@ -81,68 +81,6 @@
     </dependencyManagement>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>com.spotify</groupId>
-                    <artifactId>dockerfile-maven-plugin</artifactId>
-                    <version>1.4.13</version>
-                    <executions>
-                        <execution>
-                            <id>build-image</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>build</goal>
-                            </goals>
-                        </execution>
-
-                        <execution>
-                            <id>push-image</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>push</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <repository>localhost:5000/${project.artifactId}</repository>
-                        <imageName>${project.artifactId}</imageName>
-                        <dockerDirectory>${project.basedir}</dockerDirectory>
-                        <tag>${project.version}</tag>
-                        <buildArgs>
-                            <JAR_FILE>target/${project.artifactId}-${project.version}.jar</JAR_FILE>
-                        </buildArgs>
-                        <retryPushCount>2</retryPushCount>
-                        <resources>
-                            <resource>
-                                <directory>${project.build.directory}</directory>
-                                <include>target/${project.artifactId}-${project.version}.jar</include>
-                            </resource>
-                        </resources>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.5</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>prepare-agent</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>post-unit-test</id>
-                            <phase>test</phase>
-                            <goals>
-                                <goal>report</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -160,10 +98,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -227,7 +161,7 @@
                         </executions>
                     </plugin>
                     <plugin>
-                        <!-- Sign builded jars for deployment -->
+                        <!-- Sign built jars for deployment -->
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>1.6</version>
